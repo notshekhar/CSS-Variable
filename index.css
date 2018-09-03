@@ -1,0 +1,52 @@
+body{
+  background: black;
+}
+
+#value{
+  background: black;
+  border: solid;
+  border-radius: 2px;
+  border-width: 2px;
+  border-color: white;
+  width: 300px;
+  height: 40px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.wrap{
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+}
+.clr{
+  flex: 1;
+  color: white;
+  border-radius: 3px;
+  border: solid;
+  border-color: white;
+  background: black;
+  height: 200px;
+}
+.clr:hover{
+  color: black;
+  background: white;
+  border-color: black;
+  outline: none;
+}
+:root{
+  --color: white;
+  --size: 10px;
+}
+.change{
+  position: relative;
+  margin-top: 20px;
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+  text-align: center;
+  color: var(--color);
+  font-size: var(--size)
+}

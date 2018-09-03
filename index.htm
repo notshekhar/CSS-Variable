@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Woah! CSS variables ?!</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <input type="text" id="value" placeholder="set text size">
+    <div class="wrap">
+      <button data-color="white" class="clr">white</button>
+      <button data-color="green" class="clr">green</button>
+      <button data-color="yellow" class="clr">yellow</button>
+      <button data-color="red" class="clr">red</button>
+      <button data-color="blue" class="clr">blue</button>
+    </div>
+    <div class="change">
+      Hey! I'm CSS variable
+    </div>
+    <script type="text/javascript">
+    let color = document.querySelectorAll(".clr")
+    color.forEach(c => {
+      c.onclick = () =>{
+        document.documentElement.style.setProperty("--color", c.dataset.color)
+      }
+    })
+    document.querySelector("#value").onchange = ()=>{
+        document.documentElement.style.setProperty("--size", document.querySelector("#value").value+ "px")
+    }
+    </script>
+  </body>
+</html>
